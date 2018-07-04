@@ -4,9 +4,7 @@ pipeline{
     stage('checkout'){
       agent any
       steps{
-        step{
-          sh echo 'checkout stage......'
-        }
+        echo 'checkout stage......'
       }
     }
   }
