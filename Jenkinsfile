@@ -21,12 +21,18 @@ pipeline{
     }
     stage('deploy to SIT'){
       agent any
+      when {
+          branch 'master' 
+      }
       steps{
         echo 'SIT deploy stage......'
       }
     }
     stage('deploy to UAT'){
       agent any
+      when {
+          branch 'master' 
+      }
       steps{
         echo 'UAT deploy stage......'
       }
